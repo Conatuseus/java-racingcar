@@ -14,6 +14,13 @@ public final class AppView {
 
     public static void inputNameOfCar(){
         outputLine("경주할 자동차 이름을 입력하세요.(이름은 쉼표(,) 기준으로 구분");
+
+        String[] scannedName;
+        while (true){
+            scannedName=sc.nextLine().split(" ");
+            break;
+        }
+
     }
 
 }
