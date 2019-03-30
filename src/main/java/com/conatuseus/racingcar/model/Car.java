@@ -1,4 +1,4 @@
-package com.conatuseus.racingcar;
+package com.conatuseus.racingcar.model;
 
 public class Car {
     private final String name;
