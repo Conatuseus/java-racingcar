@@ -1,5 +1,7 @@
 package com.conatuseus.racingcar.appcontroller;
 
+import com.conatuseus.racingcar.appview.AppView;
+
 public class AppController {
 
     public AppController(){
