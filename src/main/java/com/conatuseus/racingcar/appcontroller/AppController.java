@@ -9,6 +9,6 @@ public class AppController {
 
 
     public void run(){
-
+        AppView.inputNameOfCar();
     }
 }
