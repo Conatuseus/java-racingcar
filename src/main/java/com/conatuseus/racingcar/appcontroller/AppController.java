@@ -4,10 +4,11 @@ import com.conatuseus.racingcar.appview.AppView;
 import com.conatuseus.racingcar.model.Car;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class AppController {
 
-    public static ArrayList<Car> carList=new ArrayList<>();
+    public static List<Car> carList=new ArrayList<>();
     private int numberOfTry;
     private int maxPosition;
 
@@ -31,7 +32,6 @@ public class AppController {
         this.setMaxPosition(0);
     }
 
-
     public void run(){
         AppView.outputLine(">> 게임을 시작합니다.");
 
@@ -40,7 +40,7 @@ public class AppController {
 
         AppView.outputLine("실행결과");
         racingNumberOfTry(this.getNumberOfTry());
-
+        this.printWinner(this.getMaxPosition());
 
         AppView.outputLine("<< 게임을 종료합니다.");
     }
@@ -74,10 +74,9 @@ public class AppController {
     private void printWinner(int maxPosition){
         for(Car car: carList){
             if(car.getPosition() == maxPosition){
-
+                AppView.output(car.getName()+" ");
             }
         }
+        AppView.outputLine("가 최종 우승했습니다.");
     }
-
-
 }

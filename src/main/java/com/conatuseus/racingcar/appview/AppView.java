@@ -15,7 +15,7 @@ public final class AppView {
     }
 
     public static void output(String aString){
-        System.out.println(aString);
+        System.out.print(aString);
     }
 
     public static String[] inputNameOfCar(){
