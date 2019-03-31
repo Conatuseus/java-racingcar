@@ -41,32 +41,43 @@ public class AppController {
         AppView.outputLine("실행결과");
         racingNumberOfTry(this.getNumberOfTry());
 
+
         AppView.outputLine("<< 게임을 종료합니다.");
     }
 
     private void inputAndMakeCarList(){
-        String[] carsName=AppView.inputNameOfCar();
+        String[] carsName = AppView.inputNameOfCar();
 
         for(String name : carsName){
             carList.add(new Car(name));
         }
     }
 
-    private void racingOneStep(){
+    private void racingOneStep(int step){
         for(Car car : carList){
             car.addRandomNumToPosition();
 //            AppView.outputLine(car.getPosition()+"");   // position과 - 이 맞는지 보기위한 코드
             AppView.outputLine(car.toString());
+            if(step == this.getNumberOfTry()-1){
+                this.setMaxPosition(Integer.max(maxPosition,car.getPosition()));      // 마지막 Step이면 maxPosition 검사해서 저장
+            }
         }
     }
 
     private void racingNumberOfTry(int numberOfTry){
-        for(int i=0; i<numberOfTry; i++){
-            racingOneStep();
+        for(int step=0; step<numberOfTry; step++){
+            racingOneStep(step);
             AppView.outputLine("");
         }
     }
 
+    private void printWinner(int maxPosition){
+        for(Car car: carList){
+            if(car.getPosition() == maxPosition){
+
+            }
+        }
+    }
 
 
 }
