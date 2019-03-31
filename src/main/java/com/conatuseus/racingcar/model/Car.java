@@ -22,14 +22,14 @@ public class Car {
         return this.position;
     }
 
-    public void addRandomToPosition(){
+    public void addRandomNumToPosition(){
         int random=(int)(Math.random()*MAX_RANDOM) + MIN_RANDOM;
         if(this.isGoingPossible(random)){
             this.position+=random;
         }
     }
 
-    public boolean isGoingPossible(int random){
+    private boolean isGoingPossible(int random){
         return random >= CAN_GOING;
     }
 
