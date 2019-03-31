@@ -9,6 +9,7 @@ public class AppController {
 
     public static ArrayList<Car> carList=new ArrayList<>();
     private int numberOfTry;
+    private int maxPosition;
 
     private int getNumberOfTry() {
         return numberOfTry;
@@ -18,7 +19,16 @@ public class AppController {
         this.numberOfTry = numberOfTry;
     }
 
+    public int getMaxPosition() {
+        return maxPosition;
+    }
+
+    private void setMaxPosition(int maxPosition) {
+        this.maxPosition = maxPosition;
+    }
+
     public AppController(){
+        this.setMaxPosition(0);
     }
 
 
@@ -56,5 +66,7 @@ public class AppController {
             AppView.outputLine("");
         }
     }
+
+
 
 }
