@@ -29,5 +29,11 @@ public class TestAppView {
         assertThat(AppView.isNamesValid(names[7]),is(false));
     }
 
+    @Test
+    public void 자동차_Arraylist_추가_Test(){
+        String[] names={"a","b","c","d","e"};
+
+
+    }
 
 }

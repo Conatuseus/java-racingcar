@@ -9,6 +9,15 @@ public class AppController {
 
 
     public void run(){
-        AppView.inputNameOfCar();
+        AppView.outputLine(">> 게임을 시작합니다.");
+
+        AppView.outputLine("<< 게임을 종료합니다.");
     }
+
+    private void inputAndMakeCarList(){
+        String[] carsName=AppView.inputNameOfCar();
+
+
+    }
+
 }
