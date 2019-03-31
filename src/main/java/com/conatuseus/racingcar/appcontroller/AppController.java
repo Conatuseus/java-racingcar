@@ -45,6 +45,7 @@ public class AppController {
     private void racingOneStep(){
         for(Car car : carList){
             car.addRandomNumToPosition();
+//            AppView.outputLine(car.getPosition()+"");   // position과 - 이 맞는지 보기위한 코드
             AppView.outputLine(car.toString());
         }
     }
@@ -52,6 +53,7 @@ public class AppController {
     private void racingNumberOfTry(int numberOfTry){
         for(int i=0; i<numberOfTry; i++){
             racingOneStep();
+            AppView.outputLine("");
         }
     }
 

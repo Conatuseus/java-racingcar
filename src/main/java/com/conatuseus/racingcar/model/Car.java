@@ -1,6 +1,8 @@
 package com.conatuseus.racingcar.model;
 
 
+import com.conatuseus.racingcar.appview.AppView;
+
 public class Car {
     private static final int MAX_RANDOM=9;
     private static final int MIN_RANDOM=0;
@@ -18,8 +20,13 @@ public class Car {
         return this.name;
     }
 
+    public int getPosition(){
+        return this.position;
+    }
+
     public void addRandomNumToPosition(){
         int random=(int)(Math.random()*MAX_RANDOM) + MIN_RANDOM;
+//        AppView.outputLine(random+"");          // 랜덤 수 확인하기 위한 코드
         if(this.isGoingPossible(random)){
             this.position+=random;
             this.addResult(random);
