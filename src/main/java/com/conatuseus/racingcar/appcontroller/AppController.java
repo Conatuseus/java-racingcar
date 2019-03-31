@@ -29,7 +29,7 @@ public class AppController {
         this.setNumberOfTry(AppView.inputNumberOfTry());
 
         AppView.outputLine("실행결과");
-
+        this.carsGoingOneStep();
 
         AppView.outputLine("<< 게임을 종료합니다.");
     }
@@ -46,6 +46,8 @@ public class AppController {
 
         for(Car car : carList){
             car.addRandomNumToPosition();
+            AppView.outputLine(car.getPosition()+"");       // Car의 position과 출력이 잘 되는지 비교하기 위한 코드
+            AppView.outputLine(car.toString());
         }
     }
 

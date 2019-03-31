@@ -8,9 +8,11 @@ public class Car {
 
     private final String name;
     private int position = 0;
+    private String result;
 
     public Car(String name) {
         this.name = name;
+        this.result = this.name +" : ";
     }
 
     public String getName(){
@@ -34,10 +36,9 @@ public class Car {
 
     @Override
     public String toString(){
-        StringBuilder sb=new StringBuilder();
-        sb.append(this.getName());
-        sb.append(" : ");
-        for(int i=0; i<this.getPosition(); i++){
+        StringBuilder sb=new StringBuilder(this.result);
+        int goingLength= this.getPosition()- (this.result.length()-this.name.length()-3);   // 추가된 거리 = 현재위치 - (이전거리-이름길이-3)
+        for(int i=0; i<goingLength; i++){
             sb.append("-");
         }
         return sb.toString();
