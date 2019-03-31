@@ -50,8 +50,10 @@ public final class AppView {
     public static int inputNumberOfTry(){
         outputLine("시도할 횟수는 몇회인가요?");
         String scannedNumberOfTry;
+
         while (true){
             scannedNumberOfTry=sc.nextLine();
+
             if(scannedNumberOfTry.matches("[0-9]*$")){
                 return Integer.parseInt(scannedNumberOfTry);
             }
