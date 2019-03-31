@@ -10,7 +10,7 @@ public class AppController {
     public static ArrayList<Car> carList=new ArrayList<>();
     private int numberOfTry;
 
-    public int getNumberOfTry() {
+    private int getNumberOfTry() {
         return numberOfTry;
     }
 

@@ -1,8 +1,6 @@
 package com.conatuseus.racingcar.model;
 
 
-import com.conatuseus.racingcar.appview.AppView;
-
 public class Car {
     private static final int MAX_RANDOM=9;
     private static final int MIN_RANDOM=0;
