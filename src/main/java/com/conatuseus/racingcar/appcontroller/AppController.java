@@ -1,11 +1,28 @@
+/*
+ *  @(#)AppController.java       2.00    2019/04/01
+ *
+ *  Copyright   (c) 2019 Myungki Sa.
+ *  Computer Science Engineering, Java, Daejeon, Korea
+ *  All rights reserved.
+ */
+
 package com.conatuseus.racingcar.appcontroller;
 
 import com.conatuseus.racingcar.appview.AppView;
 import com.conatuseus.racingcar.model.Car;
-
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * MCV 패턴에서 Controller에 해당하는 클래스
+ * AppView 클래스와 Car클래스와 연결되서 많은 작업을 한다.
+ * 자동차 이름을 입력받는 메소드, 레이싱을 1회 수행하는 메소드
+ * 레이싱을 시도할 횟수만큼 수행하는 메소드, 우승자를 찾아 출력하는 메소드
+ * 위의 메소드를 사용해 실행 로직을 담당하는 메소드가 있다.
+ *
+ * @version             2.00    2019년 4월 1일
+ * @author              사명기
+ */
 public class AppController {
 
     public static List<Car> carList = new ArrayList<>();
@@ -35,12 +52,12 @@ public class AppController {
     public void run() {
         AppView.outputLine(">> 게임을 시작합니다.");
 
-        this.inputAndMakeCarList();
-        this.setNumberOfTry(AppView.inputNumberOfTry());
+        this.inputAndMakeCarList();                             //  자동차 이름 입력받는 메소드 실행
+        this.setNumberOfTry(AppView.inputNumberOfTry());        //  시도할 횟수 입력받는 메소드 실행
 
         AppView.outputLine("실행결과");
-        racingNumberOfTry(this.getNumberOfTry());
-        this.printWinner(this.getMaxPosition());
+        racingNumberOfTry(this.getNumberOfTry());               //  시도할 횟수만큼 racing 진행 메소드 실행
+        this.printWinner(this.getMaxPosition());                //  우승한 자동차 이름 출력하는 메소드 실행
 
         AppView.outputLine("<< 게임을 종료합니다.");
     }
