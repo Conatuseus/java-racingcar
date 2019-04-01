@@ -8,7 +8,7 @@ import java.util.List;
 
 public class AppController {
 
-    public static List<Car> carList=new ArrayList<>();
+    public static List<Car> carList = new ArrayList<>();
     private int numberOfTry;
     private int maxPosition;
 
@@ -20,7 +20,7 @@ public class AppController {
         this.numberOfTry = numberOfTry;
     }
 
-    public int getMaxPosition() {
+    private int getMaxPosition() {
         return maxPosition;
     }
 
@@ -28,11 +28,11 @@ public class AppController {
         this.maxPosition = maxPosition;
     }
 
-    public AppController(){
+    public AppController() {
         this.setMaxPosition(0);
     }
 
-    public void run(){
+    public void run() {
         AppView.outputLine(">> 게임을 시작합니다.");
 
         this.inputAndMakeCarList();
@@ -45,36 +45,36 @@ public class AppController {
         AppView.outputLine("<< 게임을 종료합니다.");
     }
 
-    private void inputAndMakeCarList(){
+    private void inputAndMakeCarList() {
         String[] carsName = AppView.inputNameOfCar();
 
-        for(String name : carsName){
+        for (String name : carsName) {
             carList.add(new Car(name));
         }
     }
 
-    private void racingOneStep(int step){
-        for(Car car : carList){
+    private void racingOneStep(int step) {
+        for (Car car : carList) {
             car.addRandomNumToPosition();
 //            AppView.outputLine(car.getPosition()+"");   // position과 - 이 맞는지 보기위한 코드
             AppView.outputLine(car.toString());
-            if(step == this.getNumberOfTry()-1){
-                this.setMaxPosition(Integer.max(maxPosition,car.getPosition()));      // 마지막 Step이면 maxPosition 검사해서 저장
+            if (step == (this.getNumberOfTry() - 1)) {
+                this.setMaxPosition(Integer.max(this.getMaxPosition(), car.getPosition()));      // 마지막 Step이면 maxPosition 검사해서 저장
             }
         }
     }
 
-    private void racingNumberOfTry(int numberOfTry){
-        for(int step=0; step<numberOfTry; step++){
+    private void racingNumberOfTry(int numberOfTry) {
+        for (int step = 0; step < numberOfTry; step++) {
             racingOneStep(step);
             AppView.outputLine("");
         }
     }
 
-    private void printWinner(int maxPosition){
-        for(Car car: carList){
-            if(car.getPosition() == maxPosition){
-                AppView.output(car.getName()+" ");
+    private void printWinner(int maxPosition) {
+        for (Car car : carList) {
+            if (car.getPosition() == maxPosition) {
+                AppView.output(car.getName() + " ");
             }
         }
         AppView.outputLine("가 최종 우승했습니다.");
