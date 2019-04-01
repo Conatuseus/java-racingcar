@@ -59,12 +59,12 @@ public class AppController {
     }
 
     /* 마지막 회차 변수의 getter */
-    public int getLastRacingNumber() {
+    private int getLastRacingNumber() {
         return lastRacingNumber;
     }
 
     /* 마지막 회차 변수의 setter */
-    public void setLastRacingNumber(int lastRacingNumber) {
+    private void setLastRacingNumber(int lastRacingNumber) {
         this.lastRacingNumber = lastRacingNumber;
     }
 
