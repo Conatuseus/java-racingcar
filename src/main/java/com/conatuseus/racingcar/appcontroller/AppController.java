@@ -142,7 +142,7 @@ public class AppController {
     private void printWinner(int maxPosition) {
         for (Car car : carList) {                               //자동차 리스트를 돌며
             if (car.getPosition() == maxPosition) {             // maxPosition과 같으면
-                AppView.output(car.getName() + " ");    // 출력
+                AppView.output(car.getName() + " ");    // 자동차 이름 출력
             }
         }
         AppView.outputLine("가 최종 우승했습니다.");
