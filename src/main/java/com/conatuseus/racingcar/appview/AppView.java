@@ -1,9 +1,20 @@
+/*
+ *  @(#)AppView.java       2.00    2019/04/01
+ *
+ *  Copyright   (c) 2019 Myungki Sa.
+ *  Computer Science Engineering, Java, Daejeon, Korea
+ *  All rights reserved.
+ */
+
 package com.conatuseus.racingcar.appview;
 
 import java.util.HashSet;
 import java.util.Scanner;
 import java.util.Set;
 
+/**
+ *
+ */
 public final class AppView {
     private static final Scanner sc = new Scanner(System.in);
     private static final String ALPHABET = "^[a-zA-Z]*$";
