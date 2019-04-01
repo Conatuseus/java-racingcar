@@ -6,6 +6,8 @@ import java.util.Set;
 
 public final class AppView {
     private static final Scanner sc=new Scanner(System.in);
+    private static final String ALPHABET="^[a-zA-Z]*$";
+    private static final int VALID_NAME_LENGTH=5;
 
     private AppView(){
     }
@@ -33,7 +35,7 @@ public final class AppView {
 
     public static boolean isNamesValid(String[] scannedName){
         for(String name : scannedName){
-            if((name.length()>5) || (!name.matches("^[a-zA-Z]*$"))){
+            if((name.length()>VALID_NAME_LENGTH) || (!name.matches(ALPHABET))){
                 return false;
             }
         }
