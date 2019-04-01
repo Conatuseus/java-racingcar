@@ -13,11 +13,22 @@ import java.util.Scanner;
 import java.util.Set;
 
 /**
+ * AppView 클래스는 View를 담당하는 클래스
+ * 이 클래스에는 사용자의 입출력과 관련된 메소드들이 있다.
+ * 출력에 관한 메소드, 차 이름을 입력 메소드, 시도할 횟수 입력 메소드
  *
+ * @version             2.00    2019년 4월 1일
+ * @author              사명기
  */
 public final class AppView {
+
+    /* Scanner 변수 */
     private static final Scanner sc = new Scanner(System.in);
+
+    /* String matches에 사용할 regex 정의해둠 */
     private static final String ALPHABET = "^[a-zA-Z]*$";
+
+    /* 가능한 이름의 최대 길이 저장 */
     private static final int VALID_NAME_LENGTH = 5;
 
     private AppView() {
