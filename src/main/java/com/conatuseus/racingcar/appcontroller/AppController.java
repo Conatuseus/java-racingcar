@@ -25,34 +25,47 @@ import java.util.List;
  */
 public class AppController {
 
+    /* Car객체들을 저장하기 위한 List */
     public static List<Car> carList = new ArrayList<>();
-    private int numberOfTry;
-    private int maxPosition;
 
+    /* 시도할 횟수를 저장할 변수 */
+    private int numberOfTry;
+
+    /* 우승자의 position을 저장할 변수 */
+    private int maxPosition=0;
+
+    /* numberOfTry(시도할 횟수)의 getter */
     private int getNumberOfTry() {
         return numberOfTry;
     }
 
+    /* numberOfTry(시도할 횟수)의 setter */
     private void setNumberOfTry(int numberOfTry) {
         this.numberOfTry = numberOfTry;
     }
 
+    /* maxPosition(가장 큰 position)의 getter */
     private int getMaxPosition() {
         return maxPosition;
     }
 
+    /* maxPosition(가장 큰 position)의 setter */
     private void setMaxPosition(int maxPosition) {
         this.maxPosition = maxPosition;
     }
 
+    /* AppController class의 생성자.  */
     public AppController() {
-        this.setMaxPosition(0);
     }
 
+    /*
+    * run 메소드는 게임을 순차적으로 실행하기 위한 메소드
+    * 자동차 이름 입력, 시도할 횟수 입력, 실행 결과  를 순차적으로 실행한다.
+    */
     public void run() {
         AppView.outputLine(">> 게임을 시작합니다.");
 
-        this.inputAndMakeCarList();                             //  자동차 이름 입력받는 메소드 실행
+        this.inputNameAndMakeCarList();                             //  자동차 이름 입력받는 메소드 실행
         this.setNumberOfTry(AppView.inputNumberOfTry());        //  시도할 횟수 입력받는 메소드 실행
 
         AppView.outputLine("실행결과");
@@ -62,7 +75,10 @@ public class AppController {
         AppView.outputLine("<< 게임을 종료합니다.");
     }
 
-    private void inputAndMakeCarList() {
+    /*
+    * 자동차
+    * */
+    private void inputNameAndMakeCarList() {
         String[] carsName = AppView.inputNameOfCar();
 
         for (String name : carsName) {
