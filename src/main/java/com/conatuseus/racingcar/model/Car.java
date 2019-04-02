@@ -11,6 +11,7 @@ package com.conatuseus.racingcar.model;
 /**
  * Car class
  * 자동차가 랜덤 수를 생성해서 조건에 만족하면 자신의 position을 변경하도록 한다
+ * toString 메소드는 출력을 위해 재정의하였다.
  *
  * @version             2.00    2019년 4월 1일
  * @author              사명기
