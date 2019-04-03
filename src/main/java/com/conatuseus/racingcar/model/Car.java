@@ -27,10 +27,8 @@ public class Car {
     /* 랜덤 수가 4 이상 되야 갈 수 있음에 사용하기 위한 변수 */
     private static final int GOING_POSSIBLE = 4;
 
-    /* 자동차 이름 */
     private final String name;
 
-    /* 자동차 위치 */
     private int position = 0;
 
     /* -을 저장하기 위한 변수 */
@@ -41,12 +39,10 @@ public class Car {
         this.name = name;
     }
 
-    /* 이름 getter */
     public String getName() {
         return this.name;
     }
 
-    /* 위치 getter */
     public int getPosition() {
         return this.position;
     }

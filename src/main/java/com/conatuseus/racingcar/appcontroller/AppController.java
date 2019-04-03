@@ -49,22 +49,18 @@ public class AppController {
         this.numberOfTry = numberOfTry;
     }
 
-    /* maxPosition(가장 큰 position)의 getter */
     private int getMaxPosition() {
         return maxPosition;
     }
 
-    /* maxPosition(가장 큰 position)의 setter */
     private void setMaxPosition(int maxPosition) {
         this.maxPosition = maxPosition;
     }
 
-    /* 마지막 회차 변수의 getter */
     private int getLastRacingNumber() {
         return lastRacingNumber;
     }
 
-    /* 마지막 회차 변수의 setter */
     private void setLastRacingNumber(int lastRacingNumber) {
         this.lastRacingNumber = lastRacingNumber;
     }
